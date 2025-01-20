@@ -14,7 +14,7 @@ env:
 
 jobs:
   terraform:
-    if: github.repository != 'hashicorp-education/learn-terraform-github-actions'
+    if: github.repository != 'mfnerd/stage2-armageddon'
     name: "Terraform Plan"
     runs-on: ubuntu-latest
     permissions:
