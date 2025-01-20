@@ -57,7 +57,7 @@ module "osaka_tgw_branch" {
 }
 
 
-resource "aws_rds_cluster" "aurora_osaka" {
+resource "aws_rds_cluster" "default" {
   provider           = aws.osaka
   cluster_identifier = "aurora-cluster-demo"
   engine             = "aurora-mysql"
@@ -72,7 +72,7 @@ resource "aws_rds_cluster" "aurora_osaka" {
   vpc_security_group_ids = [aws_security_group.database_sg.id]
 }
 
-resource "aws_rds_cluster_instance" "aurora_osaka_instance" {
+resource "aws_rds_cluster_instance" "aurora_instance" {
   provider             = aws.osaka
   cluster_identifier   = aws_rds_cluster.default.id
   instance_class       = "db.t3.medium"
