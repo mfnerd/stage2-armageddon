@@ -12,5 +12,5 @@ terraform {
 #    region  = "us-east-1"                    # Use a variable for the region
 #    encrypt = true                           # Enable server-side encryption (optional but recommended)
 #   }
-#}
+}
 
