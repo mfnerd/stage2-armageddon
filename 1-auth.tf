@@ -1,10 +1,13 @@
 terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
+  backend "remote" {
+    hostname = "app.terraform.io"  # Default Terraform Cloud hostname
+    organization = "MFNERDINCORPORATED"
+
+    workspaces {
+      name = "stage2"
     }
   }
+}
 
 #  backend "s3" {
 #    bucket  = "tf-backend-shepzilla"         # Name of the S3 bucket
