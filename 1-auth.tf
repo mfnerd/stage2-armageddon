@@ -11,3 +11,4 @@ terraform {
       name = "stage2"
     }
   }
+}
