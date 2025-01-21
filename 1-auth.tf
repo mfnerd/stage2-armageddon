@@ -5,6 +5,13 @@ terraform {
       version = "~> 5.0"
     }
   }
+ cloud {
+    organization = "MFNERDINCORPORATED"
+
+    workspaces {
+      name = "stage2"
+    }
+  }
 
   backend "s3" {
     bucket  = "tf-backend-shepzilla"         # Name of the S3 bucket
